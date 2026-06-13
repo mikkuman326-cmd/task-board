@@ -2,7 +2,29 @@
 
 ## プロジェクト概要
 
-(未定。プロジェクトの内容が決まり次第、ここに技術スタックや構成を追記する)
+テキスト入力でタスクを追加・完了切替・削除できるタスクボードアプリ。
+タスクは localStorage に保存され、リロードしても保持される。
+
+## 技術スタック
+
+- React 19 + TypeScript
+- Vite 8 (ビルド・開発サーバー)
+- ESLint (typescript-eslint)
+- デプロイ: GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`)
+
+## デプロイ先
+
+https://mikkuman326-cmd.github.io/task-board/
+
+- `main` ブランチへのpushで自動デプロイされる。
+- `vite.config.ts` の `base` はリポジトリ名に合わせて `/task-board/` に設定済み。
+
+## コンポーネントの命名規約
+
+- コンポーネントファイルはパスカルケース (`App.tsx` など)。
+- 各コンポーネントに対応するスタイルは同名の `.css` ファイル (`App.css`) に記述する。
+- 型定義は `src/types.ts` に集約し、型名はパスカルケース (`Task` など) とする。
+- グローバルなスタイル・CSS変数は `src/index.css` に置く。
 
 ## Git運用ルール
 
